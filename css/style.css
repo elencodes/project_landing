@@ -29,6 +29,7 @@ body {
 	font-size: 1.25rem; /*--20px в макете / 16px (по умолчанию в браузере)--*/
 	color: #000;
 	background-color: #FFFFFF;
+	overflow-x: hidden;
 }
 
 .container {
@@ -66,6 +67,15 @@ body {
 	transition: opacity .2s linear;
 }
 
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.header__button--hover:hover,
+	.header-content__button--hover:hover,
+	.form__button--hover:hover {
+	opacity: none;
+	}
+}
+
 .button__text {
 	font-family: 'Intro', sans-serif;
 	font-weight: 600;
@@ -91,8 +101,8 @@ body {
 	padding-top: 3.125rem; /*--50px в макете / 16px (по умолчанию в браузере)--*/
 }
 
-/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
-@media (max-width: 48.0625em) {
+/*--Адаптив для экранов до 1023px (1023px/16px=63.9375em)-*/
+@media (max-width: 63.9375em) {
 	.container__content {
 	text-align: center;
 	}
@@ -100,6 +110,20 @@ body {
 
 .container-content {
 	position: relative;
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.container-content {
+	padding-top: 9.375rem; /*--150px в макете / 16px (по умолчанию в браузере)--*/
+	}
+}
+
+/*--Адаптив для экранов до 431px (431px/16px=26.9375em)-*/
+@media (max-width: 26.9375em) {
+	.container-content {
+	padding-top: 6.25rem; /*--100px в макете / 16px (по умолчанию в браузере)--*/
+	}
 }
 
 /*--Адаптив для экранов до 1024px (1024px/16px=64em)-*/
@@ -119,8 +143,8 @@ body {
 	max-width: 33.875rem; /*--542px / 16px (по умолчанию в браузере)---*/
 }
 
-/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
-@media (max-width: 48.0625em) {
+/*--Адаптив для экранов до 1023px (1023px/16px=63.9375em)-*/
+@media (max-width: 63.9375em) {
 	.header__content {
 		max-width: 100%;
 		display: flex;
@@ -143,7 +167,15 @@ body {
 /*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
 @media (max-width: 48.0625em) {
 	.header__title {
-	font-size: 2.5rem; /*--40px / 16px (по умолчанию в браузере)--*/
+	font-size: 3.4375rem; /*--55px / 16px (по умолчанию в браузере)--*/
+	margin-bottom: 5.625rem; /*-90px в макете / 16px (по умолчанию в браузере)--*/
+	}
+}
+
+/*--Адаптив для экранов до 431px (431px/16px=26.9375em)-*/
+@media (max-width: 26.9375em) {
+	.header__title {
+		margin-bottom: 5rem; /*--80px в макете / 16px (по умолчанию в браузере)--*/ 
 	}
 }
 
@@ -156,7 +188,15 @@ body {
 /*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
 @media (max-width: 48.0625em) {
 	.header__text {
-	font-size: 1rem; /*--16px в макете / 16px (по умолчанию в браузере)--*/
+	font-size: 1.75rem; /*--28px в макете / 16px (по умолчанию в браузере)--*/
+	margin-bottom: 9.375rem; /*--120px в макете / 16px (по умолчанию в браузере)--*/ 
+	}
+}
+
+/*--Адаптив для экранов до 431px (431px/16px=26.9375em)-*/
+@media (max-width: 26.9375em) {
+	.header__text {
+		margin-bottom: 6.25rem; /*--100px в макете / 16px (по умолчанию в браузере)--*/ 
 	}
 }
 
@@ -169,8 +209,8 @@ body {
 /*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
 @media (max-width: 48.0625em) {
 	.header-content__button {
-	width: 12.5rem; /*--200px в макете / 16px (по умолчанию в браузере)--*/
-	height: 3.75rem; /*--60px в макете / 16px (по умолчанию в браузере)--*/
+	width: 13.75rem; /*--220px в макете / 16px (по умолчанию в браузере)--*/
+	height: 4.375rem; /*--70px в макете / 16px (по умолчанию в браузере)--*/
 	padding: 0.75rem 1.125rem; /*--12px в макете / 16px (по умолчанию в браузере)- 18px / 16-*/
 	}
 }
@@ -198,10 +238,25 @@ body {
 /*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
 @media (max-width: 48.0625em) {
 	.nav {
+	margin-top: 17.5rem; /*--280px в макете / 16px (по умолчанию в браузере)  80px--*/
+	}
+}
+
+/*--Адаптив для экранов до 431px (431px/16px=26.9375em)-*/
+@media (max-width: 26.9375em) {
+	.nav {
+	margin-top: 13.75rem; /*--220px в макете / 16px (по умолчанию в браузере)  80px--*/
+	}
+}
+
+/*--Адаптив для экранов до 1023px (1023px/16px=63.9375em)-*/
+@media (max-width: 63.9375em) {
+	.nav {
 	max-width: 100%;
 	justify-content: space-around;
 	}
 }
+
 
 .nav__link {
 	font-size: 1.25rem;  /*--20px в макете / 16px (по умолчанию в браузере)--*/
@@ -220,6 +275,20 @@ body {
 	transition: color .1s linear;
 }
 
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.nav__link--hover:hover {
+	color: none;
+	}
+}
+
+/*--Адаптив для экранов до 431px (431px/16px=26.9375em)-*/
+@media (max-width: 26.9375em) {
+	.nav__link--hover:hover {
+	color: none;
+	}
+}
+
 
 /*------Possibilities------*/
 
@@ -229,8 +298,8 @@ body {
 	flex-wrap: wrap;
 }
 
-/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
-@media (max-width: 48.0625em) {
+/*--Адаптив для экранов до 1023px (1023px/16px=63.9375em)-*/
+@media (max-width: 63.9375em) {
 	.card__wrapper {
 	justify-content: center;
 	align-items: center;
@@ -261,9 +330,18 @@ body {
 	margin-bottom: 1.25rem; /*--20px в макете / 16px (по умолчанию в браузере)--*/
 }
 
-/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
-@media (max-width: 48.0625em) {
+/*--Адаптив для экранов до 1023px (1023px/16px=63.9375em)-*/
+@media (max-width: 63.9375em) {
 	.card:nth-child(3){
+	display: none;
+	}
+}
+
+/*--Адаптив для экранов до 431px (431px/16px=26.9375em)-*/
+@media (max-width: 26.9375em) {
+	.card:nth-child(3),
+	.card:nth-child(4),
+	.card:nth-child(5) {
 	display: none;
 	}
 }
@@ -274,6 +352,13 @@ body {
 
 .card--hover:hover {
 	border: 1px solid #BB2247;
+}
+
+/*--Адаптив для экранов до 1023px (1023px/16px=63.9375em)-*/
+@media (max-width: 63.9375em) {
+	.card--hover:hover {
+	border: none;
+	}
 }
 
 .card__image {
@@ -320,8 +405,8 @@ body {
 	background-color: #EC615B;
 }
 
-/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
-@media (max-width: 48.0625em) {
+/*--Адаптив для экранов до 1023px (1023px/16px=63.9375em)-*/
+@media (max-width: 63.9375em) {
 	.form {
 	display: flex;
 	flex-direction: column;
@@ -333,7 +418,7 @@ body {
 .form__button {
 	width: 8.4375rem; /*--135px в макете / 16px (по умолчанию в браузере)--*/
 	height: 2.375rem; /*--38px в макете / 16px (по умолчанию в браузере)--*/
-	padding: 0.625rem 0.9375rem; /*--10px в макете / 16px (по умолчанию в браузере)- 15px / 16ox-*/
+	padding: 0.625rem 0.9375rem; /*--10px в макете / 16px (по умолчанию в браузере)- 15px / 16px-*/
 	font-family: 'Intro', sans-serif;
 	font-weight: 600;
 	font-size: 0.8125rem; /*--13px в макете / 16px (по умолчанию в браузере)--*/
@@ -345,6 +430,7 @@ body {
 @media (max-width: 48.0625em) {
 	.form__button  {
 	font-size: 0.625rem; /*--10px / 16px (по умолчанию в браузере)--*/
+	justify-content: center;
 	}
 }
 
