@@ -1,0 +1,358 @@
+/*------Fonts------*/
+
+
+@font-face {
+	font-family: 'Intro';
+	src: url("../fonts/Intro-Regular.woff") format('woff'), url("../fonts/Intro-Regular.woff2") format('woff2');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Intro';
+	src: url("../fonts/Intro-Bold.woff") format('woff'), url("../fonts/Intro-Bold.woff2") format('woff2');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'RobotoSlab';
+	src: url("../fonts/RobotoSlab-Light.woff") format('woff'), url("../fonts/RobotoSlab-Light.woff2") format('woff2');
+	font-weight: 300;
+}
+
+
+/*------Body------*/
+
+
+body {
+	font-family: 'RobotoSlab', sans-serif;
+	font-weight: 300;
+	font-size: 1.25rem; /*--20px в макете / 16px (по умолчанию в браузере)--*/
+	color: #000;
+	background-color: #FFFFFF;
+}
+
+.container {
+	width: 100%;
+	max-width: 82.1875rem; /*--1290px+25px / 16 (по умолчанию)--*/
+	margin: 0 auto;
+	padding-top: 25px;
+}
+
+.header__inner {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__button {
+	width: 7.1875rem; /*--115px в макете / 16px (по умолчанию в браузере)--*/
+	height: 2.375rem; /*--38px в макете / 16px (по умолчанию в браузере)--*/
+	padding: 0.625rem 0.9375rem; /*--10px в макете / 16px (по умолчанию в браузере)- 15px / 16-*/
+}
+
+.button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #5222D0;
+	border-radius: 50px;
+}
+
+.header__button--hover:hover,
+.header-content__button--hover:hover,
+.form__button--hover:hover {
+	opacity: 0.8;
+	transition: opacity .2s linear;
+}
+
+.button__text {
+	font-family: 'Intro', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+.button-text__header	{
+	font-size: 0.8125rem; /*--13px в макете / 16px (по умолчанию в браузере)--*/
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.button-text__header {
+	font-size: 0.625rem; /*--10px / 16px (по умолчанию в браузере)--*/
+	}
+}
+
+.container__content {
+	width: 100%;
+	max-width: 78.125rem;  /*--1200px + 50px padding /  16px (по умолчанию в браузере)--*/
+	margin: 0 auto;
+	padding-top: 3.125rem; /*--50px в макете / 16px (по умолчанию в браузере)--*/
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.container__content {
+	text-align: center;
+	}
+}
+
+.container-content {
+	position: relative;
+}
+
+/*--Адаптив для экранов до 1024px (1024px/16px=64em)-*/
+@media (min-width: 64em) {
+	.container-content::before {
+	content: "";
+	background: url("../img/background.svg") 0 0 / 100% no-repeat;
+	position: absolute;
+	right: 0;
+	width: 91.33%;  /*--ширину картинки 1096px / ширину контейнера 1200px  * 100 =  91.33%--*/
+	padding-top: 60.33%;  /*--высоту картинки 724px / ширину контейнера 1200px  * 100 = 60.33%--*/
+	transform: translate(40%,-10%);
+	}
+}
+
+.header__content {
+	max-width: 33.875rem; /*--542px / 16px (по умолчанию в браузере)---*/
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.header__content {
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+}
+
+.header__title {
+	font-family: 'Intro', sans-serif;
+	font-weight: 600;
+	font-size: 3.875rem; /*--62px / 16px (по умолчанию в браузере)--*/
+	line-height: 1.2;
+	text-transform: uppercase;
+	margin-bottom: 0.625rem; /*--10px в макете / 16px (по умолчанию в браузере)--*/ 
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.header__title {
+	font-size: 2.5rem; /*--40px / 16px (по умолчанию в браузере)--*/
+	}
+}
+
+.header__text {
+	margin-bottom: 1.875rem; /*--30px в макете / 16px (по умолчанию в браузере)--*/ 
+	font-size: 1.25rem;  /*--20px в макете / 16px (по умолчанию в браузере)--*/
+	line-height: 1.6;
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.header__text {
+	font-size: 1rem; /*--16px в макете / 16px (по умолчанию в браузере)--*/
+	}
+}
+
+.header-content__button {
+	width: 16.875rem; /*--270px в макете / 16px (по умолчанию в браузере)--*/
+	height: 5.25rem; /*--84px в макете / 16px (по умолчанию в браузере)--*/
+	padding: 1.5rem 2rem; /*--24px в макете / 16px (по умолчанию в браузере)- 32px / 16-*/
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.header-content__button {
+	width: 12.5rem; /*--200px в макете / 16px (по умолчанию в браузере)--*/
+	height: 3.75rem; /*--60px в макете / 16px (по умолчанию в браузере)--*/
+	padding: 0.75rem 1.125rem; /*--12px в макете / 16px (по умолчанию в браузере)- 18px / 16-*/
+	}
+}
+
+.button-text__content {
+	font-size: 2.1875rem; /*--35px в макете / 16px (по умолчанию в браузере)--*/
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.button-text__content {
+	font-size: 1.25rem; /*--20px / 16px (по умолчанию в браузере)--*/
+	}
+}
+
+.nav {
+	margin-top: 9.125rem; /*--146px в макете / 16px (по умолчанию в браузере)  80px--*/
+	padding-bottom: 3.125rem; /*--50px в макете / 16px (по умолчанию в браузере)--*/
+	max-width: 33.25rem; /*--532px в макете / 16px (по умолчанию в браузере)--*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.nav {
+	max-width: 100%;
+	justify-content: space-around;
+	}
+}
+
+.nav__link {
+	font-size: 1.25rem;  /*--20px в макете / 16px (по умолчанию в браузере)--*/
+	color: #000;
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.nav__link {
+	font-size: 1rem; /*--16px в макете / 16px (по умолчанию в браузере)--*/
+	}
+}
+
+.nav__link--hover:hover {
+	color: #5222D0;
+	transition: color .1s linear;
+}
+
+
+/*------Possibilities------*/
+
+
+.card__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.card__wrapper {
+	justify-content: center;
+	align-items: center;
+	}
+}
+
+.card-wrapper__title {
+	font-family: 'Intro', sans-serif;
+	font-weight: 600;
+	font-size: 3.75rem; /*--60px в макете / 16px (по умолчанию в браузере)--*/
+	line-height: 1.2;
+	text-transform: uppercase;
+	margin-bottom: 0.625rem; /*--10px в макете / 16px (по умолчанию в браузере)--*/
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.card-wrapper__title {
+	font-size: 2.5rem; /*--40px / 16px (по умолчанию в браузере)--*/
+	}
+}
+
+.card {
+	width: 100%;
+	height: 100%;
+	padding: 1.5625rem 1.25rem; /*--25px в макете / 16px (по умолчанию в браузере) и 20 px / 16 --*/
+	width: 25rem; /*--400px в макете / 16px (по умолчанию в браузере)--*/
+	margin-bottom: 1.25rem; /*--20px в макете / 16px (по умолчанию в браузере)--*/
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.card:nth-child(3){
+	display: none;
+	}
+}
+
+.card__bottom {
+	height: 16.1875rem; /*--259px в макете / 16px (по умолчанию в браузере)--*/
+}
+
+.card--hover:hover {
+	border: 1px solid #BB2247;
+}
+
+.card__image {
+	display: block;
+	width: 22.8125rem; /*--365px в макете / 16px (по умолчанию в браузере)--*/
+	margin-bottom: 1.25rem; /*--20px в макете / 16px (по умолчанию в браузере)--*/
+	object-fit: cover;
+}
+
+.card__title {
+	font-family: 'Intro', sans-serif;
+	font-weight: 600;
+	font-size: 1.75rem; /*--28px в макете / 16px (по умолчанию в браузере)--*/
+	line-height: 1.2;
+	text-transform: uppercase;
+	margin-bottom: 0.625rem;  /*--10px в макете / 16px (по умолчанию в браузере)--*/
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.card__title {
+	font-size: 1.25rem; /*--20px в макете / 16px (по умолчанию в браузере)--*/
+	}
+}
+
+.card__text {
+	font-size: 1.25rem;  /*--20px в макете / 16px (по умолчанию в браузере)--*/
+	line-height: 1.6;
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48em) {
+	.card__text  {
+		font-size: 1rem; /*--16px в макете / 16px (по умолчанию в браузере)--*/
+	}
+}
+
+.form {
+	width: 100%;
+	height: 100%;
+	padding: 1.5625rem 1.3125rem; /*--25px в макете / 16px (по умолчанию в браузере) и 21px / 16px--*/
+	width: 22.8125rem; /*--365px в макете / 16px (по умолчанию в браузере)--*/
+	height: 14.5625rem; /*--233px в макете / 16px (по умолчанию в браузере)--*/
+	background-color: #EC615B;
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	}
+}
+
+.form__button {
+	width: 8.4375rem; /*--135px в макете / 16px (по умолчанию в браузере)--*/
+	height: 2.375rem; /*--38px в макете / 16px (по умолчанию в браузере)--*/
+	padding: 0.625rem 0.9375rem; /*--10px в макете / 16px (по умолчанию в браузере)- 15px / 16ox-*/
+	font-family: 'Intro', sans-serif;
+	font-weight: 600;
+	font-size: 0.8125rem; /*--13px в макете / 16px (по умолчанию в браузере)--*/
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+/*--Адаптив для экранов до 769px (769px/16px=48.0625em)-*/
+@media (max-width: 48.0625em) {
+	.form__button  {
+	font-size: 0.625rem; /*--10px / 16px (по умолчанию в браузере)--*/
+	}
+}
+
+.form__input {
+	padding: 1.0625rem 0 1.0625rem 0.875rem; /*--pt 17px, pb 17px и pl 14px в макете / 16px (по умолчанию в браузере)--*/
+	margin-bottom: 1.4375rem; /*--23px в макете / 16px (по умолчанию в браузере)--*/
+}
+
+.card-title--white {
+	color: #FFFFFF;
+}
